@@ -1,0 +1,29 @@
+<view class="my">
+
+  <view class="my-bg">
+    <image class="img" src="cloud://shopping-qjbx6.7368-shopping-qjbx6-1301541086/bacimg/欧.jpg" mode="widthFix"></image>
+
+    <view class="my-box">
+      <view class="avatar fl">
+      <image class="img" mode="widthFix"  wx:if="{{userInfo.url != ''}}" src="{{userInfo.url}}" ></image>
+      </view>
+      <view class="nickname fl">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+
+  <view class="my-list">
+    <view class="my-list-item" bindtap="myTurn">
+      <view class="fl text">我的收藏</view>
+      <view class="fr arrow" >
+        <image class="img" src="../../images/right-arrow.png" mode="widthFix"></image>
+      </view>
+    </view>
+     <view class="my-list-item" bindtap="newTurn">
+      <view class="fl text">个人资料</view>
+      <view class="fr arrow">
+        <image class="img" src="../../images/right-arrow.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+
+</view>

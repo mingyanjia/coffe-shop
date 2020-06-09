@@ -1,0 +1,16 @@
+.img{
+  width: 100%;
+   height: 326.086rpx;
+}
+
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}

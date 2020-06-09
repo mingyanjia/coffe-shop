@@ -1,0 +1,70 @@
+<view class='detail'>
+  <view>
+    <image src='{{detailData.large_img}}' mode='widthFix' class="img"></image>
+  </view>
+
+  <view class="detail-box">
+    <view class="prop clearfix">
+      <view class="fl prop-name">{{detailData.name}}</view>
+      <view class="fr prop-like" data-id='{{detailData._id}}' bindtap="likeProduct">
+        <image src='../../images/{{isLike ? "like_active" : "like"}}.png' mode='widthFix' class="img"></image>
+      </view>
+    </view>
+
+
+    <view class="rul">
+      <view class="rul-item clearfix">
+        <view class="fl rul-title">温度</view>
+        <view class="fl rul-tag clearfix">
+          <view class="fl rul-tag-item  {{idx==item.Item_id?'fl rul-tag-item active':''}}" wx:for="{{applyList}}" wx:key="idx" bindtap='cli' data-id="{{item.Item_id}}">{{item.Item_Name}}</view>
+         
+        </view>
+      </view>
+
+
+       <view class="rul-item clearfix">
+        <view class="fl rul-title">糖量</view>
+        <view class="fl rul-tag clearfix">
+          <view class="fl rul-tag-item  {{idxx==item.Item_iid?'fl rul-tag-item active':''}}" wx:for="{{apply}}" wx:key="idxx" bindtap='cli1' data-id="{{item.Item_iid}}">{{item.Item_Name}}</view>
+         
+        </view>
+      </view>
+    </view>
+
+    <!-- 描述 -->
+    <view class="dec">
+      <view class="dec-title">商品描述</view>
+      <view>
+        <view class="dec-text" wx:for='{{detailData.desc}}' wx:key='index'>{{item}}</view>
+      </view>
+    </view>
+
+
+
+    <!-- 商品价格数量 -->
+    <view class="price-count clearfix">
+      <view class="fl price">￥{{detailData.price}}</view>
+      <view class="fr clearfix">
+        <view class="icon fl" bindtap="reduce">
+          <image class="img" src="../../images/reduce.png" mode="widthFix" ></image>
+        </view>
+        <view class="fl count">{{count}}</view>
+
+        <view class="icon fl" bindtap="add">
+          <image class="img" src="../../images/add.png" mode="widthFix" ></image>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+  <!-- 底部按钮区 -->
+  <view class="btns">
+    <view class="fr clearfix">
+      <view class="fl btn shopcart" bindtap="addShopcart">加入购物车</view>
+      <view class="fl btn buy" bindtap="buy" data-key='1'>立即购买</view>
+    </view>
+  </view>
+
+</view>
